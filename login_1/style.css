@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Poppins;
+  background: #080710;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_box {
+  position: relative;
+  padding: 100px;
+}
+
+.r_1,
+.r_2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  animation: customAnimate 2s infinite linear 1s;
+}
+
+@keyframes customAnimate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.r_1 {
+  top: 1px;
+  left: 1px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.r_2 {
+  bottom: 0;
+  right: 1px;
+  background: rgb(255, 108, 108);
+  background: linear-gradient(
+    231deg,
+    rgba(255, 108, 108, 1) 0%,
+    rgba(238, 164, 24, 1) 100%
+  );
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(16px);
+  border-radius: 4rem;
+  width: 400px;
+  height: 500px;
+  z-index: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form_title {
+  color: #fafafa;
+  font-size: 4rem;
+}
+.form_inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form_inputs_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.form_inputs_box > label {
+  color: #eeeeee;
+  font-size: 1.2rem;
+}
+
+.login_btn {
+  border: none;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 2rem;
+  font-family: "Poppins";
+  transition: background 1s;
+}
+.login_btn:hover {
+  background: #080710;
+  color: #fafafa;
+  cursor: pointer;
+}
+.form_inputs_box input {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.13);
+  color: #fafafa;
+  border-radius: 0.7rem;
+}
+.form_inputs_box input:focus {
+  outline: none;
+}
