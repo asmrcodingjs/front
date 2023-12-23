@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Poppins;
+  background: linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  );
+  color: white;
+  transition: background ease 10ms;
+  animation: gAnimation 10s infinite alternate;
+}
+
+@keyframes gAnimation {
+  0%,
+  100% {
+    background-size: 200% 100%;
+  }
+  30% {
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-size: 200% 100%;
+    background-position: 100% 50%;
+  }
+
+  70% {
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-size: 200% 100%;
+    background-position: 100% 50%;
+  }
+}
+
+.timer-container {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#timer {
+  font-family: 3em;
+  margin: 10px;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#add-task-btn,
+.delete-btn,
+#start-btn,
+#stop-btn {
+  color: white;
+  font-size: 0.8em;
+  margin-left: 5px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  transition: background 0.03s ease;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#start-btn {
+  background: #4caf50;
+}
+
+#start-btn:hover {
+  background: #429945;
+}
+
+#stop-btn {
+  background: #ff4d4d;
+}
+
+#stop-btn:hover {
+  background: #da4141;
+}
+
+#task-list {
+  padding: 0;
+  height: 100px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px;
+  padding: 10px;
+  width: 250px;
+  background: #fff;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#new-task {
+  padding: 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  color: #333;
+}
+
+#new-task:focus {
+  outline: none;
+}
+
+#new-task:focus::placeholder {
+  color: #919090e6;
+}
+
+#add-task-btn {
+  background: #46cc4a;
+}
+
+#add-task-btn:hover {
+  background: #3aac3e;
+}
+
+.selected-task {
+  background: #46cc4a;
+  color: white;
+}
+
+#selected-task-name {
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #46cc4a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
