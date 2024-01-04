@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsmrCodingJs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">
+        🗣️ Text To Speech
+    </h1>
+    <div class="wrapper">
+        <form id="form">
+            <div class="input_box">
+                <input type="text" name="text" id="test" />
+                <button class="handleBtn" type="submit">🎙️</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+<script>
+    const handleBtn = document.getElementById("form")
+    handleBtn.addEventListener("submit", (e) => {
+        e.preventDefault()
+        if ("speechSynthesis" in window) {
+            const msg = new SpeechSynthesisUtterance()
+            msg.text = new FormData(handleBtn).get("text") || "please enter a value"
+            window.speechSynthesis.speak(msg)
+        }
+    })
+</script>
+
+</html>
